@@ -69,12 +69,20 @@ const editItem = (itemId) => {
 
   return (
     <>
-    <ToastContainer position='top-center' />
-      <Form addItem={addItem} />
-      <Items itemsInTotal={itemsTotal} removeItem={removeItem} editItem={editItem} />
-      
+      <div className="main_container">
+        <div className='material'>
+          <ToastContainer position="top-center" />
+          <div className='titlediv'><h1>Grocery-List</h1></div>
+          <Form addItem={addItem} />
+          <Items
+            itemsInTotal={itemsTotal}
+            removeItem={removeItem}
+            editItem={editItem}
+          />
+        </div>
+      </div>
     </>
-  )
+  );
 }
 
 export default App

@@ -32,18 +32,17 @@ const Form = ({addItem}) => {
   
 console.log(item);
   return (
-    <div className='form_container'>
-        <div className='inputdiv'>
-
-         <form onSubmit={handleSubmit}>
-            <input value={item} type="text" onChange={(e)=>setItem(e.target.value)} />
-            <button type='submit'  >Add Item</button>
-        </form>
-
-        </div>
-      
-    </div>
-  )
+   
+      <form className="formdiv"  onSubmit={handleSubmit}>
+        <input
+          value={item}
+          type="text"
+          onChange={(e) => setItem(e.target.value)}
+        />
+        <button type="submit">Add Item</button>
+      </form>
+   
+  );
 }
 
 export default Form
