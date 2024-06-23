@@ -1,17 +1,26 @@
-import React from 'react'
+import { nanoid } from 'nanoid'
+import React, { useState } from 'react'
+import SingleItem from './SingleItem'
 
-const Items = ({itemsInTotal}) => {
+const Items = ({itemsInTotal,removeItem,editItem}) => {
+
+  
+
   return (
     <div className="item_container">
 
+{itemsInTotal.map((item)=>{
+  return(
+    <div key={nanoid()} className='itemsdiv'>
 
-
-
-        <div className='itemsdiv'>
-            <input type="checkbox" checked="" />
-            <span>name</span>
-            <button>Delete</button>
+      <SingleItem item={item} editItem={editItem} removeItem={removeItem} />
+            
         </div>
+  )
+})}
+
+
+        
     </div>
   )
 }
